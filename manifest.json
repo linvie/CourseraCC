@@ -1,0 +1,25 @@
+{
+    "name": "CourseraCC",
+    "version": "1.0.0",
+    "bacground": {
+        "scripts": [
+            "bacground.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.coursera.org/*",
+                "http://www.coursera.org/*"
+            ],
+            "js": [
+                "contentScript.js"
+            ],
+            "css": [
+                ""
+            ]
+        }
+    ],
+    "manifest_version": 2
+}

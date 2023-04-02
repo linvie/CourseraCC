@@ -1,12 +1,27 @@
 {
     "name": "CourseraCC",
     "version": "1.0.0",
-    "bacground": {
-        "scripts": [
-            "bacground.js"
-        ],
-        "persistent": false
+    "description": "Coursera CC Translator",
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "img/favicon-v2-16x16.png",
+            "32": "img/favicon-v2-32x32.png"
+        }
     },
+    "icons": {
+        "16": "img/favicon-v2-16x16.png",
+        "32": "img/favicon-v2-32x32.png",
+        "64": "img/favicon-v2-64x64.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "tabs",
+        "storage",
+        "activeTab"
+    ],
     "content_scripts": [
         {
             "matches": [
@@ -15,11 +30,8 @@
             ],
             "js": [
                 "contentScript.js"
-            ],
-            "css": [
-                ""
             ]
         }
     ],
-    "manifest_version": 2
+    "manifest_version": 3
 }

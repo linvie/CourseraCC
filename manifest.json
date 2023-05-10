@@ -9,15 +9,16 @@
             "32": "img/favicon-v2-32x32.png"
         }
     },
+    "background": {
+        "service_worker": "background.js"
+    },
     "icons": {
         "16": "img/favicon-v2-16x16.png",
         "32": "img/favicon-v2-32x32.png",
         "64": "img/favicon-v2-64x64.png"
     },
-    "background": {
-        "service_worker": "background.js"
-    },
     "permissions": [
+        "scripting",
         "tabs",
         "storage",
         "activeTab"
@@ -29,7 +30,7 @@
                 "http://www.coursera.org/*"
             ],
             "js": [
-                "contentScript.js"
+                "background.js"
             ]
         }
     ],
